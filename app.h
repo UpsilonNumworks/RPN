@@ -4,6 +4,7 @@
 #include "../shared/shared_app.h"
 #include <escher.h>
 #include "../shared/text_field_delegate_app.h"
+#include "../shared/poincare_local_pool.h"
 #include "rpn_content_view.h"
 #include "rpn_stack.h"
 #include "rpn_stack_controller.h"
@@ -33,6 +34,7 @@ public:
   };
 private:
   App(Snapshot * snapshot);
+  Shared::PoincareLocalPool m_poincarePool;
   ::Toolbox * toolboxForInputEventHandler(InputEventHandler * textInput) override;
 
   StackController m_stackController;
